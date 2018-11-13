@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Animation</title>
+
+	<style type="text/css">
+		.my-block {
+			display: grid;
+			place-content: start center;
+			grid-template-columns: 100px;
+		}
+
+		.my-cell {
+			width: 100px;
+			height: 100px;
+			background: blue;
+			border-radius: 0;
+
+			transition: 1s;
+		}
+
+		.my-cell:hover {
+			background: red;
+			border-radius: 50%;
+			transform: rotate(90deg);
+			transition-timing-function: ease-in-out;
+			transition: 3s;
+		}
+	</style>
+</head>
+<body>
+	<div class="my-block">
+		<div class="my-cell"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Harvest</title>
+
+	<style type="text/css">
+		body {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-left: 100px;
+		}
+
+		button {
+			width: 120px;
+			margin: 8px;
+			border: 2px solid navy;
+			border-radius: 5px;
+			background: white;
+			font-family: "Roboto";
+			color: navy;
+			font-size: 16px;
+			padding: 8px;
+		}
+
+		button:hover {
+			cursor: pointer;
+			background: #000080ab;
+			color: white;
+			-webkit-box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.75);
+			-moz-box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.75);
+			box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.75);
+		}
+
+		.tractor {
+			margin-left: -300px;
+			width: 100px;
+			height: 100px;
+			background-image: url("lawn-mower.png");
+			background-position: center;
+			background-size: contain;
+			position: relative;
+			z-index: 99;
+			transform: rotate(180deg);
+		}
+
+		.down {
+			animation-name: move-down;
+			animation-duration: 15s;
+			animation-fill-mode: both;
+			animation-timing-function: linear;
+			animation-delay: 2s;
+		}
+
+		[class^="row-"],
+		[class*=" row-"] {
+			width: 400px;
+			height: 100px;
+			background: saddlebrown;
+			position: relative;
+		}
+
+		.lawn {
+			background: green;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+
+			animation-duration: 2.25s;
+			animation-fill-mode: both;
+			animation-timing-function: linear;
+		}
+
+		.row-1 .lawn {
+			animation-name: row-harvested-left-to-right;
+			animation-delay: 2.75s;
+		}
+
+		.row-2 .lawn {
+			animation-name: row-harvested-right-to-left;
+			animation-delay: 5.75s;
+		}
+
+		.row-3 .lawn {
+			animation-name: row-harvested-left-to-right;
+			animation-delay: 8.75s;
+		}
+
+		.row-4 .lawn {
+			animation-name: row-harvested-right-to-left;
+			animation-delay: 11.75s;
+		}
+
+		.row-5 .lawn {
+			animation-name: row-harvested-left-to-right;
+			animation-delay: 14.75s;
+		}
+
+		@keyframes move-down {
+			0% {
+				transform: rotate(180deg);
+				top: 0;
+				left: -50px;
+			}
+			5% {
+				transform: rotate(90deg);
+				top: 100px;
+				left: -50px;
+			}
+			10% {
+				left: 83px;
+			}
+			15% {
+				transform: rotate(90deg);
+				left: 216px;
+			}
+			20% {
+				top: 100px;
+				left: 350px;
+			}
+			25% {
+				transform: rotate(270deg);
+				top: 200px;
+				left: 350px;
+			}
+			30% {
+				left: 216px;
+			}
+			35% {
+				transform: rotate(270deg);
+				left: 83px;
+			}
+			40% {
+				top: 200px;
+				left: -50px;
+			}
+			45% {
+				transform: rotate(90deg);
+				top: 300px;
+				left: -50px;
+			}
+			50% {
+				left: 83px;
+			}
+			55% {
+				transform: rotate(90deg);
+				left: 216px;
+			}
+			60% {
+				top: 300px;
+				left: 350px;
+			}
+			65% {
+				transform: rotate(270deg);
+				top: 400px;
+				left: 350px;
+			}
+			70% {
+				left: 216px;
+			}
+			75% {
+				transform: rotate(270deg);
+				left: 83px;
+			}
+			80% {
+				top: 400px;
+				left: -50px;
+			}
+			85% {
+				transform: rotate(90deg);
+				top: 500px;
+				left: -50px;
+			}
+			90% {
+				left: 83px;
+			}
+			95% {
+				left: 216px;
+			}
+			100% {
+				transform: rotate(90deg);
+				top: 500px;
+				left: 350px;
+			}
+		}
+
+		@keyframes row-harvested-left-to-right {
+			from {left: 0;}
+			to {left: 100%;}
+		}
+
+		@keyframes row-harvested-right-to-left {
+			from {right: 0;}
+			to {right: 100%;}
+		}
+
+		.three {
+			animation-name: counter;
+			animation-duration: 1s;
+			animation-fill-mode: both;
+		}
+
+		.two {
+			animation-name: counter;
+			animation-duration: 1s;
+			animation-delay: 1s;
+			animation-fill-mode: both;
+		}
+
+		.one {
+			animation-name: counter;
+			animation-duration: 1s;
+			animation-delay: 2s;
+			animation-fill-mode: both;
+		}
+
+		.refresh {
+			animation-name: counter2;
+			animation-duration: 1s;
+			animation-delay: 3s;
+			animation-fill-mode: both;
+		}
+
+		@keyframes counter {
+			0%   {font-size: 0;}
+			50%  {font-size: 16px;}
+			100% {font-size: 0;}
+		}
+
+		@keyframes counter2 {
+			0%   {font-size: 0;}
+			100% {font-size: 16px;}
+		}
+	</style>
+</head>
+<body>
+	<div class="tractor down">
+	</div>
+	<div class="row-1">
+		<div class="lawn">
+		</div>
+	</div>
+	<div class="row-2">
+		<div class="lawn">
+		</div>
+	</div>
+	<div class="row-3">
+		<div class="lawn">
+		</div>
+	</div>
+	<div class="row-4">
+		<div class="lawn">
+		</div>
+	</div>
+	<div class="row-5">
+		<div class="lawn">
+		</div>
+	</div>
+	<a href="harvest.html">
+		<button><span class="three">3</span><span class="two">2</span><span class="one">1</span><span class="refresh">REFRESH</span></button>
+	</a>
+</body>
+</html>

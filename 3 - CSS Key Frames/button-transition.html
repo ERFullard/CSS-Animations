@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Animation</title>
+
+	<style type="text/css">
+		body {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-gap: 16px;
+			width: 100%;
+			grid-template-areas: ". left right .";
+		}
+
+		.left-shark {
+			grid-area: left;
+		}
+
+		.right-shark {
+			grid-area: right;
+			transition: box-shadow 0.3s
+		}
+
+		.right-shark:active {
+			transition: box-shadow 0.05s
+		}
+
+		button {
+			padding: 8px;
+			background: #00abff;
+			border: 2px;
+			border-radius: 5px;
+			font-weight: bold;
+			color: white;
+			box-shadow: 2px 2px 10px -3px rgba(0,0,0,0.87);
+			outline: none;
+		}
+
+		button:active {
+			box-shadow: none;
+		}
+	</style>
+</head>
+<body>
+	<button class="left-shark">PUSH ME</button>
+	<button class="right-shark">TOUCH ME</button>
+</body>
+</html>

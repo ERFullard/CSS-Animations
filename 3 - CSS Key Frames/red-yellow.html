@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Animation</title>
+
+	<style type="text/css">
+		body {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin: 36px;
+		}
+
+		pre {
+			margin: 36px;
+		}
+
+		button {
+			margin: 8px;
+			border: 2px solid navy;
+			border-radius: 5px;
+			background: white;
+			font-family: "Roboto";
+			color: navy;
+			font-size: 16px;
+			padding: 8px;
+		}
+
+		button:hover {
+			cursor: pointer;
+			background: #000080ab;
+			color: white;
+			-webkit-box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.75);
+			-moz-box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.75);
+			box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.75);
+		}
+
+		.my-block {
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: relative;
+			animation-name: red-to-yellow;
+			animation-duration: 4s;
+			animation-fill-mode: both;
+		}
+
+		@keyframes red-to-yellow {
+			from.blue {}
+			to {background-color: yellow;}
+		}
+
+		.blue {
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="my-block">
+	</div>
+	<pre>
+.my-block {
+   /*...*/
+   animation-name: red-to-yellow;
+   animation-duration: 4s;
+   animation-fill-mode: both;
+}
+
+@keyframes red-to-yellow {
+   from { background-color: red; }
+   to   { background-color: yellow; }
+}
+	</pre>
+	<a href="red-yellow.html"><button>REFRESH</button></a>
+	<a href="multi-color.html"><button>NEXT</button></a>
+</body>
+</html>
