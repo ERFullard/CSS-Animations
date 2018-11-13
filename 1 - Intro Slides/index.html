@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Animation</title>
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+	<style type="text/css">
+		.title:before {
+			content: ' ';
+			border-top: 1px solid black;
+			border-left: 1px solid black;
+			width: 36px;
+			height: 36px;
+			position: absolute;
+			margin-top: -8px;
+			margin-left: -16px;
+		}
+
+		.title:after {
+			content: ' ';
+			border-right: 1px solid black;
+			border-bottom: 1px solid black;
+			width: 36px;
+			height: 36px;
+			position: absolute;
+			margin-top: 56px;
+			margin-left: -24px;
+		}
+
+		.sub-title {
+			margin-bottom: 56px;
+		}
+
+		.disco {
+			animation-name: disco-colors;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+		}
+
+		@keyframes disco-colors {
+			0%, 100% { color: #ff2400;}
+			13% { color: #e81d1d;}
+			26% { color: #e8b71d;}
+			39% { color: #e3e81d;}
+			52% { color: #1de840;}
+			65% { color: #1ddde8;}
+			78% { color: #2b1de8;}
+			91% { color: #dd00f3;}
+		}
+	</style>
+</head>
+<body>
+	<h1 class="title"><span class="disco">CSS</span> Animations</h1>
+	<h3 class="sub-title">as imagined by Edwin Fullard</h3>
+	<a href="slide-2.html"><button class="slide-button">Next</button></a>
+</body>
+</html>
