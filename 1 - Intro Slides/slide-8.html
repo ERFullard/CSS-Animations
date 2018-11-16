@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Animation</title>
+
+	<link rel="stylesheet" type="text/css" href="../styles.css">
+
+	<style type="text/css">
+		.lists {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		h2.title {
+			margin-top: 12px;
+			margin-bottom: 12px;
+		}
+
+		.square {
+			width: 100px;
+			height: 100px;
+			background: blue;
+			margin: auto;
+		}
+
+		.transition-example {
+			transition: 2s background;
+		}
+
+		.transition-example:hover {
+			background: red;
+		}
+
+		.key-frame-example {
+			animation-name: background-to-blue;
+			animation-duration: 2s;
+			animation-fill-mode: both;
+		}
+
+		.key-frame-example:hover {
+			animation-name: background-to-red;
+		}
+
+		@keyframes background-to-red {
+			100% {background: red;}
+		}
+
+		@keyframes background-to-blue {
+			0% {background: red;}
+			100% {background: blue;}
+		}
+	</style>
+</head>
+<body>
+	<h1 class="title">Comparing on hover background color change</h1>
+	<div class="lists">
+		<div>
+			<h2 class="title">Transition</h2>
+			<div class="transition-example square"></div>
+			<pre class="code">
+.transition-example {
+	transition: 2s background;
+}
+
+.transition-example:hover {
+	background: red;
+}
+			</pre>
+		</div>
+		<div>
+			<h2 class="title">Key Frames</h2>
+			<div class="key-frame-example square"></div>
+			<pre class="code">
+.key-frame-example {
+	animation-name: background-to-blue;
+	animation-duration: 2s;
+	animation-fill-mode: both;
+}
+
+.key-frame-example:hover {
+	animation-name: background-to-red;
+}
+
+@keyframes background-to-red {
+	100% {background: red;}
+}
+
+@keyframes background-to-blue {
+	0% {background: red;}
+	100% {background: blue;}
+}
+			</pre>
+		</div>
+	</div>
+	<a href="slide-9.html"><button class="slide-button">Next</button></a>
+</body>
+</html>
