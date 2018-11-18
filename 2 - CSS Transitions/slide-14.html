@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Animation</title>
+
+	<link rel="stylesheet" type="text/css" href="../styles.css">
+
+	<style type="text/css">
+		.lists {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.title {
+			padding: 0 150px;
+		}
+
+		.example-block {
+			display: grid;
+			place-content: center;
+		}
+
+		.start {
+			background: blue;
+		}
+
+		.hover:hover {
+			transition: 3s;
+			background: red;
+		}
+
+		.click:active {
+			transition: 5s transform;
+			transform: scale(3);
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	<h2>CSS Transitions</h2>
+	<h1 class="title">Transitioning on multiple events</h1>
+	<div class="lists">
+		<div class="example-block">
+			<div class="square start hover click">.start<br/>.hover<br/>.click</div>
+		</div>
+		<div>
+			<pre class="code">
+.start {
+	background: blue;
+}
+
+.hover:hover {
+	transition: 3s;
+	background: red;
+}
+
+.click:active {
+	transition: 5s transform;
+	transform: scale(3);
+	border-radius: 50%;
+}
+			</pre>
+		</div>
+	</div>
+	<a href="slide-15.html"><button class="slide-button">Next</button></a>
+</body>
+</html>

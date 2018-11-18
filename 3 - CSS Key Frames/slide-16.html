@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Animation</title>
+
+	<link rel="stylesheet" type="text/css" href="../styles.css">
+
+	<style type="text/css">
+		.lists {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.title {
+			padding: 0 150px;
+		}
+
+		.example-block {
+			display: grid;
+			place-content: center;
+		}
+
+		.animate {
+			background: blue;
+			animation: animate;
+		}
+
+		@keyframes animate {
+			100% {background: red;}
+		}
+	</style>
+</head>
+<body>
+	<h2>CSS Key Frames</h2>
+	<h1 class="title">Getting from A to E</h1>
+	<div class="lists">
+		<div class="example-block">
+			<div class="square animate">.</div>
+		</div>
+		<div>
+			<pre class="code">
+
+			</pre>
+		</div>
+	</div>
+	<a href="slide-16.html"><button class="slide-button">Next</button></a>
+</body>
+</html>

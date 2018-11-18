@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Animation</title>
+
+	<link rel="stylesheet" type="text/css" href="../styles.css">
+
+	<style type="text/css">
+		.lists {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.title {
+			padding: 0 150px;
+		}
+
+		.example-block {
+			display: grid;
+			place-content: center;
+		}
+
+		.cool-animation {
+			background: blue;
+		}
+
+		.cool-animation:hover {
+			background: red;
+			border-radius: 50%;
+			transform: rotate(90deg);
+			transition-timing-function: ease-in-out;
+		}
+
+		.one-way:hover {
+			transition: 2s;
+		}
+
+		.both-ways {
+			transition: 0.5s;
+		}
+
+		.both-ways:hover {
+			transition: 2s;
+		}
+	</style>
+</head>
+<body>
+	<h2>CSS Transitions</h2>
+	<h1 class="title">Returning to the original state</h1>
+	<div class="lists">
+		<div class="example-block">
+			<div class="square cool-animation one-way">.one-way</div>
+			<div class="square cool-animation both-ways">.both-ways</div>
+		</div>
+		<div>
+			<pre class="code">
+.cool-animation:hover {
+	background: red;
+	border-radius: 50%;
+	transform: rotate(90deg);
+	transition-timing-function: ease-in-out;
+}
+
+.one-way:hover {
+	transition: 2s;
+}
+
+.both-ways {
+	transition: 0.5s;
+}
+
+.both-ways:hover {
+	transition: 2s;
+}
+			</pre>
+		</div>
+	</div>
+	<a href="../3 - CSS Key Frames/slide-16.html"><button class="slide-button">Next</button></a>
+</body>
+</html>

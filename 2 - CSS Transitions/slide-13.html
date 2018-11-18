@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Animation</title>
+
+	<link rel="stylesheet" type="text/css" href="../styles.css">
+
+	<style type="text/css">
+		.lists {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.title {
+			padding: 0 150px;
+		}
+
+		.example-block {
+			display: grid;
+			place-content: center;
+		}
+
+		.square {
+			background: blue;
+		}
+
+		.square:hover {
+			background: red;
+			transform: rotate(45deg);
+		}
+
+		.all {
+			transition: 1s all;
+		}
+
+		.transform {
+			transition: 1s transform;
+		}
+	</style>
+</head>
+<body>
+	<h2>CSS Transitions</h2>
+	<h1 class="title">Controlling what changes</h1>
+	<div class="lists">
+		<div class="example-block">
+			<div class="square all">.all</div>
+			<div class="square transform">.transform</div>
+		</div>
+		<div>
+			<pre class="code">
+.square:hover {
+	background: red;
+	transform: rotate(45deg);
+}
+
+.all {
+	transition: 1s all;
+}
+
+.transform {
+	transition: 1s transform;
+}
+			</pre>
+		</div>
+	</div>
+	<a href="slide-14.html"><button class="slide-button">Next</button></a>
+</body>
+</html>
