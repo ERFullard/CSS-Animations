@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Animation</title>
+
+	<link rel="stylesheet" type="text/css" href="../styles.css">
+
+	<style type="text/css">
+		.lists {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.title {
+			padding: 0 150px;
+		}
+
+		.example-block {
+			display: grid;
+			place-content: center;
+		}
+
+		.animate {
+			animation: animate;
+			animation-duration: 7.5s;
+			animation-timing-function: linear;
+			animation-fill-mode: both;
+			background: red;
+		}
+
+		@keyframes animate {
+			0% {
+				background: blue;
+			}
+			25% {
+				transform: rotate(45deg);
+				border-radius: 0%
+			}
+			50% {
+				transform: rotate(45deg);
+				border-radius: 50%;
+				background: blue;
+			}
+			75% {
+				background: red;
+				transform: scale(1);
+			}
+			100% {
+				transform: scale(2);
+				border-radius: 50%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h2>CSS Key Frames</h2>
+	<h1 class="title">Utilizing different properties and steps</h1>
+	<div class="lists">
+		<div class="example-block">
+			<div class="square animate"></div>
+		</div>
+		<div>
+			<pre class="code">
+@keyframes animate {
+	0% {
+		background: blue;
+	}
+	25% {
+		transform: rotate(45deg);
+		border-radius: 0%
+	}
+	50% {
+		transform: rotate(45deg);
+		border-radius: 50%;
+		background: blue;
+	}
+	75% {
+		background: red;
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(2);
+		border-radius: 50%;
+	}
+}
+			</pre>
+		</div>
+	</div>
+	<div>
+		<a href="slide-17.html"><button class="slide-button">Refresh</button></a>
+		<a href="slide-18.html"><button class="slide-button">Next</button></a>
+	</div>
+</body>
+</html>
