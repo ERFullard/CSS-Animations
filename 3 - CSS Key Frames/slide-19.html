@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Animation</title>
+
+	<link rel="stylesheet" type="text/css" href="../styles.css">
+
+	<style type="text/css">
+		.lists {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.title {
+			padding: 0 150px;
+		}
+
+		.example-block {
+			display: grid;
+			place-content: center;
+		}
+
+		.animate {
+			animation: animate;
+			animation-duration: 2s;
+			animation-delay: 5s;
+			width: 0;
+			height: 0;
+			border-top: 80px solid transparent;
+			border-left: 80px solid transparent;
+			border-right: 80px solid transparent;
+		}
+
+		.five {
+			animation-iteration-count: 5;
+			border-bottom: 80px solid blue;
+		}
+
+		.infinite {
+			animation-iteration-count: infinite;
+			border-bottom: 80px solid red;
+		}
+
+		@keyframes animate {
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<h2>CSS Key Frames</h2>
+	<h1 class="title">Control how many times it loops</h1>
+	<div class="lists">
+		<div class="example-block">
+			<div class="square animate five"></div>
+			<div class="square animate infinite"></div>
+		</div>
+		<div>
+			<pre class="code">
+.five {
+	animation-iteration-count: 5;
+}
+
+.infinite {
+	animation-iteration-count: infinite;
+}
+
+@keyframes animate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+			</pre>
+		</div>
+	</div>
+	<div>
+		<a href="slide-19.html"><button class="slide-button">Refresh</button></a>
+		<a href="slide-20.html"><button class="slide-button">Next</button></a>
+	</div>
+</body>
+</html>

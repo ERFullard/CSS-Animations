@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Animation</title>
+
+	<link rel="stylesheet" type="text/css" href="../styles.css">
+
+	<style type="text/css">
+		.lists {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.title {
+			padding: 0 150px;
+		}
+
+		.example-block {
+			display: grid;
+			place-content: center;
+		}
+
+		.animate {
+			animation: animate;
+			animation-duration: 2s;
+			animation-delay: 5s;
+			background: red;
+		}
+
+		@keyframes animate {
+			0% {
+				background: green;
+			}
+			100% {
+				background: blue;
+			}
+		}
+
+		.none {
+			animation-fill-mode: none;
+		}
+
+		.forwards {
+			animation-fill-mode: forwards;
+		}
+
+		.backwards {
+			animation-fill-mode: backwards;
+		}
+
+		.both {
+			animation-fill-mode: both;
+		}
+	</style>
+</head>
+<body>
+	<h2>CSS Key Frames</h2>
+	<h1 class="title">Set what happens to the styles before<br/>and after the animation</h1>
+	<div class="lists">
+		<div class="example-block">
+			<div class="square animate none">.none</div>
+			<div class="square animate forwards">.forwards</div>
+			<div class="square animate backwards">.backwards</div>
+			<div class="square animate both">.both</div>
+		</div>
+		<div>
+			<pre class="code">
+@keyframes animate {
+	0% {
+		background: green;
+	}
+	100% {
+		background: blue;
+	}
+}
+
+.none {
+	animation-fill-mode: none;
+}
+
+.forwards {
+	animation-fill-mode: forwards;
+}
+
+.backwards {
+	animation-fill-mode: backwards;
+}
+
+.both {
+	animation-fill-mode: both;
+}
+			</pre>
+		</div>
+	</div>
+	<div>
+		<a href="slide-18.html"><button class="slide-button">Refresh</button></a>
+		<a href="slide-19.html"><button class="slide-button">Next</button></a>
+	</div>
+</body>
+</html>

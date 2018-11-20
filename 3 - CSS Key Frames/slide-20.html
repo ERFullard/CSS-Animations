@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Animation</title>
+
+	<link rel="stylesheet" type="text/css" href="../styles.css">
+
+	<style type="text/css">
+		.lists {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.title {
+			padding: 0 150px;
+		}
+
+		.example-block {
+			display: grid;
+			place-content: center;
+		}
+
+		.alternate {
+			animation: line;
+			animation-direction: alternate;
+			background: red;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+
+		.loop {
+			animation: circle;
+			animation-direction: reverse;
+			transform-origin: bottom right;
+			border-radius: 50%;
+			background: blue;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+
+		@keyframes line {
+			100% {
+				transform: translateX(200px);
+			}
+		}
+
+		@keyframes circle {
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<h2>CSS Key Frames</h2>
+	<h1 class="title">How to bridge the loop gap</h1>
+	<div class="lists">
+		<div class="example-block">
+			<div class="square alternate"></div>
+			<div class="square loop"></div>
+		</div>
+		<div>
+			<pre class="code">
+.alternate {
+	animation: line;
+	animation-direction: alternate;
+}
+
+.loop {
+	animation: circle;
+	animation-direction: reverse;
+}
+
+@keyframes line {
+	100% {
+		transform: translateX(200px);
+	}
+}
+
+@keyframes circle {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+			</pre>
+		</div>
+	</div>
+	<div>
+		<a href="slide-20.html"><button class="slide-button">Refresh</button></a>
+		<a href="../thatsallfolks.html"><button class="slide-button">Next</button></a>
+	</div>
+</body>
+</html>
